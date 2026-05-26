@@ -1,0 +1,19 @@
+[
+  {
+    "category": "Recursion",
+    "subcategory": "Subsequences Pattern",
+    "problem": "Get all Power-Sets/Subsequence",
+    "questionText": "Given a string, find all the possible subsequences of the string.",
+    "input" : "nums = [1, 2, 3]",
+    "output" : "[ [ ] , [1] , [2] , [1, 2] , [3] , [1, 3] , [2, 3] , [1, 2 ,3] ]",
+    "explanation": "We have to generate all the possible combinations of array [1,2,3]. \n    So we will use recursion and use a decision tree (with a base case) to reach all possible senarios. \n    If the condition matched i.e index == length of curr - then we add it to res.\n  \nAt each step, we will decide if we want to add an alement or not (PICK/NO-PICK).\n\nSo these are the steps that take place:- \n---\n- add the first element in curr. index IS 0. **PICK 1**\n- then recursion happens. index BECOMES 1  \n- add the second element in curr. index IS 1. **PICK 2** \n- then recursion happens. index BECOMES 2.\n- add the third element in curr. index IS 2. **PICK 3**\n- then recursion happends. index BECOMES 3 \n- base case reached. index IS 3. curr=[1,2,3]. res=[[1,2,3]]. Control returns\n---\n- control goes back. curr=[1,2,3]. **index BECOMES 2**\n- now we do - curr.**pop()**. curr=[1,2]. index IS 2. - This is **BACKTRACKING**\n- then recursion happends. **index BECOMES 3**\n- base case reached. index IS 3. curr=[1,2]. res=[[1,2,3],[1,2]]. Control returns. We **NOT-PICK 3**.\n---\n- for loop **ends**. **index WAS 3 BUT NOW BECOMES 2** - We return again.\n- now curr=[1,2]. **index AGAIN BECOMES 1**. - *This is how we travel back to the Parent node*\n---\n- now we do - curr.**pop()**. curr=[1]. **index IS 1** - this is **BACKTRACKING**\n- then recursion happends. curr=[1]. **index BECOMES 2**\n- now we add third element. curr=[1,3]. **index IS 2**. We **NOT-PICK 2** \n- recursion happens. **index BECOMES 3**\n- base case reached. index IS 3. curr=[1,3]. res=[[1,2,3],[1,2],[1,3]]. Control Returns.... \n---\nThis continues for the complete decision tree.",
+    "codeSnippet": "def fun(self, index, curr, arr, res):\n    if index>=len(arr):\n        res.append(curr.copy()) #thing to remember\n        return\n    curr.append(arr[index])\n    self.fun(index+1, curr, arr, res)\n    curr.pop()\n    self.fun(index+1, curr, arr, res)",
+    "timeComplexity": "O(2^N)",
+    "timeComplexityExplanation": "Since we had 2 choices at each step (Pick/No-Pick). Every step == N. so if N is 3 -> 2^3",
+    "spaceComplexity": "O(N)",
+    "spaceComplexityExplanation":"Depth of the recursion tree",
+    "repoUrl": "https://github.com/ankitbapat/leetcode/blob/main/Recursion/SubsequencesPattern/PowerSet.py",
+    "difficulty": null,
+    "leetcodeUrl": null
+  }
+]
