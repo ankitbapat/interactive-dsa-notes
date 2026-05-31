@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [problems, setProblems] = useState([]);
@@ -50,6 +51,7 @@ function App() {
   );
 
   return (
+    <>
     <div className="page">
       <div className="card">
         <h1 className="under-dev">THIS IS UNDER DEVELOPMENT</h1>
@@ -311,6 +313,8 @@ function App() {
         )}
       </div>
     </div>
+    <Analytics/>
+    </>
   );
 }
 
