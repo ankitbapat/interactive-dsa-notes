@@ -14,6 +14,68 @@
     "spaceComplexityExplanation":"Depth of the recursion tree",
     "repoUrl": "https://github.com/ankitbapat/leetcode/blob/main/Recursion/SubsequencesPattern/PowerSet.py",
     "difficulty": null,
-    "leetcodeUrl": null
+    "leetcodeUrl": null,
+    "patternGame": {
+      "steps": [
+        {
+          "question": "What pattern would you use?",
+          "options": [
+            "Sliding Window",
+            "Binary Search",
+            "Backtracking",
+            "Greedy"
+          ],
+          "correct": "Backtracking",
+          "successMessage": "Correct! Every element creates choices.",
+          "failureMessage": "Think about how many choices each element creates."
+        },
+        {
+          "question": "What clue helped identify it?",
+          "options": [
+            "Sorted Array",
+            "Pick / Not Pick Choices",
+            "Prefix Sum",
+            "Adjacent Elements"
+          ],
+          "correct": "Pick / Not Pick Choices"
+        },
+        {
+          "question": "What structure is created?",
+          "options": [
+            "Graph",
+            "Heap",
+            "Decision Tree",
+            "Queue"
+          ],
+          "correct": "Decision Tree"
+        }
+      ]
+    },
+    "thinkingProcess": [
+      {
+        "type": "wrong",
+        "thought": "Can I brute force all combinations?"
+      },
+      {
+        "type": "insight",
+        "thought": "Wait, the problem wants ALL subsequences."
+      },
+      {
+        "type": "insight",
+        "thought": "Each element gives me two choices."
+      },
+      {
+        "type": "insight",
+        "thought": "Pick it or don't pick it."
+      },
+      {
+        "type": "aha",
+        "thought": "That's a decision tree!"
+      },
+      {
+        "type": "aha",
+        "thought": "A decision tree means recursion and backtracking."
+      }
+    ]
   }
 ]

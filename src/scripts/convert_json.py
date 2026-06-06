@@ -6,11 +6,11 @@ import re
 # CONFIG
 # -----------------------------
 
-OLD_JSON = "../../public/data/questions.json"
-OUTPUT_JSON = "../../public/data/questions_final.json"
+OLD_JSON = "../../public/data/questions_2.json"
+OUTPUT_JSON = "../../public/data/questions_final_2.json"
 
 # root folder of cloned repo
-REPO_ROOT = "https://github.com/ankitbapat/leetcode/tree/main"
+REPO_ROOT = "https://github.com/ankitbapat/leetcode/tree/main/"
 
 # -----------------------------
 # HELPERS
@@ -77,7 +77,7 @@ final_data = []
 
 for item in old_data:
 
-    category = item.get("category", "Other")
+    category = item.get("category")
     topic = item.get("topic", "General")
 
     md_text = read_md_file(category)
@@ -117,45 +117,45 @@ for item in old_data:
     new_item = {
         "category": category,
         "subcategory": topic,
-        "problem": item.get("question"),
+        "problem": item.get("Question"),
 
-        "questionText": item.get(
-            "questionText"
-        ),
+        # "questionText": item.get(
+        #     "questionText"
+        # ),
 
-        "input": clean_text(input_data),
+        # "input": clean_text(input_data),
 
-        "output": clean_text(output_data),
+        # "output": clean_text(output_data),
 
-        "explanation": clean_text(
-            explanation
-        ),
+        # "explanation": clean_text(
+        #     explanation
+        # ),
 
-        "codeSnippet": item.get("source"),
+        # "codeSnippet": item.get("source"),
 
-        "timeComplexity": item.get(
-            "time"
-        ),
+        # "timeComplexity": item.get(
+        #     "time"
+        # ),
 
-        "spaceComplexity": item.get(
-            "space"
-        ),
+        # "spaceComplexity": item.get(
+        #     "space"
+        # ),
 
-        "timeComplexityExplanation":
-            clean_text(time_explanation),
+        # "timeComplexityExplanation":
+        #     clean_text(time_explanation),
 
-        "spaceComplexityExplanation":
-            clean_text(space_explanation),
+        # "spaceComplexityExplanation":
+        #     clean_text(space_explanation),
 
-        "difficulty": item.get(
-            "difficulty"
-        ),
+        # "difficulty": item.get(
+        #     "difficulty"
+        # ),
 
-        "leetcodeUrl": item.get(
-            "leetcodeUrl"
-        ),
+        # "leetcodeUrl": item.get(
+        #     "leetcodeUrl"
+        # ),
 
-        "repoUrl": item.get("repoUrl")
+        # "repoUrl": item.get("repoUrl")
     }
 
     final_data.append(new_item)

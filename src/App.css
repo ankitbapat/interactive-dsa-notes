@@ -15,7 +15,7 @@ body {
 }
 
 .card {
-  width: 900px;
+  width: 992px;
   background: white;
   padding: 35px;
   border-radius: 24px;
@@ -201,7 +201,7 @@ body {
 .complexity-explanation-box h4 {
   margin: 0 0 10px 0;
   color: #374151;
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .problem-content p,
@@ -317,6 +317,26 @@ body {
 
 
 /* Markdown Styling */
+.explanation-section {
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  background: #fafbff;
+  border-left: 5px solid #4f46e5;
+
+  padding: 20px 24px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.explanation-header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #312e81;
+  margin-bottom: 18px;
+}
 
 .markdown-content {
   line-height: 1.8;
@@ -359,3 +379,136 @@ body {
   border-radius: 6px;
   font-size: 13px;
 }
+
+.points-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+}
+
+.solve-btn {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.editor-section {
+  margin-top: 24px;
+}
+
+/* 
+.pattern-game {
+  margin-top: 24px;
+  padding: 20px;
+  background: #fafbff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.question-box {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-btn {
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.option-btn:hover {
+  background: #eef2ff;
+}
+
+.correct-msg {
+  margin-top: 12px;
+  color: green;
+  font-weight: 600;
+}
+
+.wrong-msg {
+  margin-top: 12px;
+  color: red;
+  font-weight: 600;
+}
+
+.success-box {
+  padding: 16px;
+  background: #ecfdf5;
+  border-radius: 12px;
+  color: #166534;
+  font-weight: 600;
+}
+
+.thinking-section {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+}
+
+.thinking-section h4 {
+  margin-bottom: 16px;
+}
+
+.thinking-card {
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.thinking-card.wrong {
+  background: #fef2f2;
+  border-left: 4px solid #ef4444;
+}
+
+.thinking-card.insight {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+}
+
+.thinking-card.aha {
+  background: #ecfdf5;
+  border-left: 4px solid #22c55e;
+  font-weight: 600;
+}
+
+.thinking-btn {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */

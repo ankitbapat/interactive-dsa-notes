@@ -1,0 +1,28 @@
+{
+  "mockInterview": [
+    {
+      "speaker": "Interviewer",
+      "text": "Generate all subsequences of [1,2,3]."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I need all possible combinations."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "For each number, how many choices do you have?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Pick it or skip it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What pattern does that create?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A decision tree."
+    }
+  ]
+}
